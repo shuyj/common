@@ -55,7 +55,7 @@ public:
         }
     }
 
-    void post_task(MTask task)
+    void async(MTask task)
     {
         if (m_stop.load())
         {
@@ -68,15 +68,13 @@ public:
         m_condition.notify_one();
     }
     
-    template<class F, class... Args>
-    auto post_task_future(F&& f, Args&&... args) ->std::future<decltype(f(args...))>
+    auto sync(MTask func) ->std::future<void>
     {
         if (m_stop.load())
             throw std::runtime_error("commit on ThreadPool is stopped.");
             
-        using RetType = decltype(f(args...));
-        auto task = std::make_shared<std::packaged_task<RetType()> >(std::bind(std::forward<F>(f), std::forward<Args>(args)...));
-        std::future<RetType> future = task->get_future();
+            auto task = std::make_shared<std::packaged_task<void()> >(func);
+            std::future<void> future = task->get_future();
         {
             std::lock_guard<std::mutex> lock{ m_lock };
             m_tasks.emplace( [task](){  (*task)();  }  );

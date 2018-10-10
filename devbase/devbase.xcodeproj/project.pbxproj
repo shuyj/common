@@ -15,6 +15,7 @@
 		3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A702125928300E50064 /* CThread.cpp */; };
 		3E6C1A7C2125928300E50064 /* port.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A752125928300E50064 /* port.c */; };
 		3E6C1A7D2125928300E50064 /* logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A782125928300E50064 /* logging.c */; };
+		3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A6A2125928300E50064 /* MThreadPool.cpp */; };
 		3EEE7298215F752700506653 /* ppl_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE7297215F752700506653 /* ppl_test.cpp */; };
 /* End PBXBuildFile section */
 
@@ -236,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */,
 				3E3370D6216B5F3B003C66D2 /* main.cpp in Sources */,
 				3E3370DA216B5F60003C66D2 /* c++experimental.cpp in Sources */,
 			);
