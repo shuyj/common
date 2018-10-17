@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E3370CE216B44FC003C66D2 /* boost-timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1F9B3A21301118006CE590 /* boost-timer.cpp */; };
-		3E3370D6216B5F3B003C66D2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3370D5216B5F3B003C66D2 /* main.cpp */; };
-		3E3370DA216B5F60003C66D2 /* c++experimental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1AF9E216B3F2E005145BF /* c++experimental.cpp */; };
 		3E6C1A792125928300E50064 /* str_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A692125928300E50064 /* str_utils.c */; };
 		3E6C1A7A2125928300E50064 /* MThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A6A2125928300E50064 /* MThreadPool.cpp */; };
 		3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A702125928300E50064 /* CThread.cpp */; };
 		3E6C1A7C2125928300E50064 /* port.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A752125928300E50064 /* port.c */; };
 		3E6C1A7D2125928300E50064 /* logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A782125928300E50064 /* logging.c */; };
+		3EA21A692175CE1C00A9CDC9 /* c++experimental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1AF9E216B3F2E005145BF /* c++experimental.cpp */; };
+		3EA21A78217728CC00A9CDC9 /* ppl_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE7297215F752700506653 /* ppl_test.cpp */; };
 		3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A6A2125928300E50064 /* MThreadPool.cpp */; };
-		3EEE7298215F752700506653 /* ppl_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE7297215F752700506653 /* ppl_test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -238,8 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */,
-				3E3370D6216B5F3B003C66D2 /* main.cpp in Sources */,
-				3E3370DA216B5F60003C66D2 /* c++experimental.cpp in Sources */,
+				3EA21A692175CE1C00A9CDC9 /* c++experimental.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +248,8 @@
 				3E6C1A7D2125928300E50064 /* logging.c in Sources */,
 				3E6C1A7A2125928300E50064 /* MThreadPool.cpp in Sources */,
 				3E6C1A792125928300E50064 /* str_utils.c in Sources */,
-				3E3370CE216B44FC003C66D2 /* boost-timer.cpp in Sources */,
 				3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */,
-				3EEE7298215F752700506653 /* ppl_test.cpp in Sources */,
+				3EA21A78217728CC00A9CDC9 /* ppl_test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
