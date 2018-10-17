@@ -68,7 +68,7 @@ public:
         m_condition.notify_one();
     }
     
-    auto sync(MTask func) ->std::future<void>
+    void sync(MTask func)
     {
         if (m_stop.load())
             throw std::runtime_error("commit on ThreadPool is stopped.");
@@ -81,7 +81,7 @@ public:
         }
         m_condition.notify_one();
         
-        return future;
+        return future.wait();
     }
 
     void shutdown()
