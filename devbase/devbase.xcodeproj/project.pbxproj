@@ -13,8 +13,9 @@
 		3E6C1A7C2125928300E50064 /* port.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A752125928300E50064 /* port.c */; };
 		3E6C1A7D2125928300E50064 /* logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A782125928300E50064 /* logging.c */; };
 		3EA21A692175CE1C00A9CDC9 /* c++experimental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1AF9E216B3F2E005145BF /* c++experimental.cpp */; };
-		3EA21A78217728CC00A9CDC9 /* ppl_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE7297215F752700506653 /* ppl_test.cpp */; };
 		3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A6A2125928300E50064 /* MThreadPool.cpp */; };
+		97600AB52768439200C7A6E9 /* thread_pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 97600AB42768439200C7A6E9 /* thread_pool.cc */; };
+		97600AC02768463400C7A6E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A61212591F000E50064 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,8 @@
 		3E6C1A80212594A000E50064 /* actor-boost.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "actor-boost.cpp"; sourceTree = "<group>"; };
 		3EE1AF9E216B3F2E005145BF /* c++experimental.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "c++experimental.cpp"; sourceTree = "<group>"; };
 		3EEE7297215F752700506653 /* ppl_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ppl_test.cpp; sourceTree = "<group>"; };
+		97600AB32768439200C7A6E9 /* thread_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_pool.h; sourceTree = "<group>"; };
+		97600AB42768439200C7A6E9 /* thread_pool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread_pool.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 		3E6C1A682125928300E50064 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				97600AB42768439200C7A6E9 /* thread_pool.cc */,
+				97600AB32768439200C7A6E9 /* thread_pool.h */,
 				3E6C1A7E2125937400E50064 /* MMessage.h */,
 				3E6C1A692125928300E50064 /* str_utils.c */,
 				3E6C1A6A2125928300E50064 /* MThreadPool.cpp */,
@@ -244,12 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97600AC02768463400C7A6E9 /* main.cpp in Sources */,
+				97600AB52768439200C7A6E9 /* thread_pool.cc in Sources */,
 				3E6C1A7C2125928300E50064 /* port.c in Sources */,
 				3E6C1A7D2125928300E50064 /* logging.c in Sources */,
 				3E6C1A7A2125928300E50064 /* MThreadPool.cpp in Sources */,
 				3E6C1A792125928300E50064 /* str_utils.c in Sources */,
 				3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */,
-				3EA21A78217728CC00A9CDC9 /* ppl_test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +403,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../third-party/boost/boost_1_63_0/include";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../third-party/boost/boost_1_63_0/lib";
-				OTHER_LDFLAGS = (
-					"-lboost_system",
-					"-lboost_thread",
-					"-lboost_filesystem",
-					"-lboost_unit_test_framework",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -415,12 +416,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_OS_IPHONE=1";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../third-party/boost/boost_1_63_0/include";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../third-party/boost/boost_1_63_0/lib";
-				OTHER_LDFLAGS = (
-					"-lboost_system",
-					"-lboost_thread",
-					"-lboost_filesystem",
-					"-lboost_unit_test_framework",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -9,7 +9,7 @@
 #include <iostream>
 #include <future>
 #include <system_error>
-#include <boost/test/unit_test.hpp>
+//#include <boost/test/unit_test.hpp>
 
 void testFunc()
 {
@@ -34,8 +34,8 @@ void testFunc3(std::thread* t1)
     printf("testFunc3 exec...\n");
 }
 
-//int main(int argc, const char * argv[]) {
-BOOST_AUTO_TEST_CASE( TestMain ){
+void test1(){
+//BOOST_AUTO_TEST_CASE( TestMain ){
     // insert code here...
     
 //    std::future<void> testFu = std::async(std::launch::async, &testFunc);
@@ -76,4 +76,8 @@ BOOST_AUTO_TEST_CASE( TestMain ){
 //    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     
 //    return 0;
+}
+
+int main(int argc, const char * argv[]) {
+
 }
