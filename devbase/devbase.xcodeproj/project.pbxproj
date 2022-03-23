@@ -12,10 +12,13 @@
 		3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A702125928300E50064 /* CThread.cpp */; };
 		3E6C1A7C2125928300E50064 /* port.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A752125928300E50064 /* port.c */; };
 		3E6C1A7D2125928300E50064 /* logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A782125928300E50064 /* logging.c */; };
-		3EA21A692175CE1C00A9CDC9 /* c++experimental.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1AF9E216B3F2E005145BF /* c++experimental.cpp */; };
 		3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A6A2125928300E50064 /* MThreadPool.cpp */; };
 		97600AB52768439200C7A6E9 /* thread_pool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 97600AB42768439200C7A6E9 /* thread_pool.cc */; };
 		97600AC02768463400C7A6E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A61212591F000E50064 /* main.cpp */; };
+		97600AC52768497600C7A6E9 /* IOBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97600AC32768497600C7A6E9 /* IOBase.cpp */; };
+		9774979627E9AD4C009D16C0 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9774979427E9AD4C009D16C0 /* StringUtils.cpp */; };
+		9774979927E9BB33009D16C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3370D5216B5F3B003C66D2 /* main.cpp */; };
+		9774979E27E9BB48009D16C0 /* MThread.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C1A732125928300E50064 /* MThread.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +71,10 @@
 		3EEE7297215F752700506653 /* ppl_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ppl_test.cpp; sourceTree = "<group>"; };
 		97600AB32768439200C7A6E9 /* thread_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_pool.h; sourceTree = "<group>"; };
 		97600AB42768439200C7A6E9 /* thread_pool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread_pool.cc; sourceTree = "<group>"; };
+		97600AC32768497600C7A6E9 /* IOBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOBase.cpp; sourceTree = "<group>"; };
+		97600AC42768497600C7A6E9 /* IOBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOBase.hpp; sourceTree = "<group>"; };
+		9774979427E9AD4C009D16C0 /* StringUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtils.cpp; sourceTree = "<group>"; };
+		9774979527E9AD4C009D16C0 /* StringUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringUtils.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +155,10 @@
 				3E6C1A762125928300E50064 /* MThreadPool.hpp */,
 				3E6C1A772125928300E50064 /* spin_mutex.h */,
 				3E6C1A782125928300E50064 /* logging.c */,
+				97600AC32768497600C7A6E9 /* IOBase.cpp */,
+				97600AC42768497600C7A6E9 /* IOBase.hpp */,
+				9774979427E9AD4C009D16C0 /* StringUtils.cpp */,
+				9774979527E9AD4C009D16C0 /* StringUtils.hpp */,
 			);
 			name = common;
 			path = ../common;
@@ -240,8 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9774979E27E9BB48009D16C0 /* MThread.hpp in Sources */,
+				9774979927E9BB33009D16C0 /* main.cpp in Sources */,
 				3EB96A78216DE78000668639 /* MThreadPool.cpp in Sources */,
-				3EA21A692175CE1C00A9CDC9 /* c++experimental.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +264,11 @@
 				97600AC02768463400C7A6E9 /* main.cpp in Sources */,
 				97600AB52768439200C7A6E9 /* thread_pool.cc in Sources */,
 				3E6C1A7C2125928300E50064 /* port.c in Sources */,
+				9774979627E9AD4C009D16C0 /* StringUtils.cpp in Sources */,
 				3E6C1A7D2125928300E50064 /* logging.c in Sources */,
 				3E6C1A7A2125928300E50064 /* MThreadPool.cpp in Sources */,
 				3E6C1A792125928300E50064 /* str_utils.c in Sources */,
+				97600AC52768497600C7A6E9 /* IOBase.cpp in Sources */,
 				3E6C1A7B2125928300E50064 /* CThread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

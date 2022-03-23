@@ -147,7 +147,7 @@ private:
                 (*ev->process)(ev->msg);
             }
         }
-        __MDLOGD_TAG("MThread","mthread dispose done!!!\n");
+//        __MDLOGD_TAG("MThread","mthread dispose done!!!\n");
     }
 };
 

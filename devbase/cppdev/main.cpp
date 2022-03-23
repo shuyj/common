@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "MThreadPool.hpp"
+#include "MThread.hpp"
 
 class A : public std::enable_shared_from_this<A> {
     std::string  mcontent = "A content";
@@ -40,6 +41,18 @@ public:
     }
 };
 
+int testM(int a, int b){
+    std::cout<<"a=" << a << " b=" << b<< std::endl;
+    return a+b;
+}
+
+int testA(int){
+    std::cout<<"testA" << std::endl;
+    return 1;
+}
+
+typedef int(&TESTM)();
+
 int main(int argc, const char * argv[]) {
     
     MThreadPool::Create(1);
@@ -50,5 +63,38 @@ int main(int argc, const char * argv[]) {
     std::cout<< "A print222" << std::endl;
     a.reset();
     std::cout<< "A print333" << std::endl;
+    MThreadPool::instance()->sync([](){
+        std::cout<< "MThreadPool sync" << std::endl;
+    });
     MThreadPool::Destroy();
+    
+    MThread<int>* mt = new MThread<int>();
+    mt->start([](int){});
+    int ret = mt->postSyncEvent(1, testM, 2, 5);
+    
+    std::cout<< "postSSyncEvent=" << ret << std::endl;
+    
+    delete mt;
+    
+    MTaskQueue<int> mtq;
+    mtq.start(1);
+    
+    auto fu = mtq.async(std::bind(testM, 3, 5));
+    
+    std::cout<< "asyc=" << fu.get() << std::endl;
+    
+    mtq.shutdown();
+    
+    using rrrr = std::result_of<TESTM()>::type;
+    
+    rrrr ss = 1;
+    
+    MTaskQueueT1<int()> mtq1;
+    mtq1.start(1);
+    
+//    auto fu1 = mtq1.async(std::bind(testA));
+    auto fu1 = mtq1.async(std::bind(testA, 6));
+    std::cout<< "asyc=" << fu1.get() << std::endl;
+    
+    mtq1.shutdown();
 }
