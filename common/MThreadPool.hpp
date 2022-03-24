@@ -69,11 +69,25 @@ public:
         m_condition.notify_one();
     }
     
+    bool current() {
+        auto tid = std::this_thread::get_id();
+        for (std::thread& th : m_threads) {
+            if (th.get_id() == tid) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     void sync(MTask func)
     {
         if (m_stop.load())
             throw std::runtime_error("commit on ThreadPool is stopped.");
             
+        if (current()) {
+            func();
+            return;
+        }
         std::promise<void> taskpm;
         //auto task = std::make_shared<std::packaged_task<void()> >(func);
         auto task = func;
