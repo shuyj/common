@@ -9,7 +9,7 @@
 #ifndef IOBase_hpp
 #define IOBase_hpp
 
-#include <stdio.h>
+#include <memory>
 
 
 // 输入输出接口
@@ -63,7 +63,26 @@
  simplest
  filter{ in_queue[], out_queue[],
  
+ 
+ 只实现逻辑层， 线程和上下关系极简化，可生成一些工具类来帮助构建关系。   如何简单方便的来实现多输入和多输出
+ 
+ 
+ 
  */
 
+class ACacheBuffer {
+public:
+    ACacheBuffer(int capacity);
+    int freeSpace();
+    int len();
+    bool write(const char* pb, int len);
+    bool read(char* pb, int len);
+
+private:
+    std::unique_ptr<char[]>     _buf;
+    int                         _capacity;
+    int                         _bufPosw;
+    int                         _bufPosr;
+};
 
 #endif /* IOBase_hpp */

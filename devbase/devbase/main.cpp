@@ -77,7 +77,7 @@ void test1(){
     
 //    return 0;
 }
-
+#include "TimeUtils.h"
 int main(int argc, const char * argv[]) {
-
+    GetCurrentTimeMs();
 }

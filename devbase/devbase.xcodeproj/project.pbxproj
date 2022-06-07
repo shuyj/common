@@ -75,6 +75,8 @@
 		97600AC42768497600C7A6E9 /* IOBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOBase.hpp; sourceTree = "<group>"; };
 		9774979427E9AD4C009D16C0 /* StringUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtils.cpp; sourceTree = "<group>"; };
 		9774979527E9AD4C009D16C0 /* StringUtils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringUtils.hpp; sourceTree = "<group>"; };
+		978CB89E280FAC81001FF603 /* TimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeUtils.h; sourceTree = "<group>"; };
+		978EF98B2806B68100A9EEB6 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,8 @@
 				97600AC42768497600C7A6E9 /* IOBase.hpp */,
 				9774979427E9AD4C009D16C0 /* StringUtils.cpp */,
 				9774979527E9AD4C009D16C0 /* StringUtils.hpp */,
+				978EF98B2806B68100A9EEB6 /* common.h */,
+				978CB89E280FAC81001FF603 /* TimeUtils.h */,
 			);
 			name = common;
 			path = ../common;
